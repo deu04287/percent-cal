@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>복리 계산기</title>
+
+</head>
+
+<body class="test">
+    <header class="header">
+        <h1>복리 계산기</h1>
+    </header>
+
+    <div id="root0">
+        <div id="root2">
+            <form>
+                <div style="">
+                    <input type=number id=number>
+                </div>
+                <div>
+                    <label class="form-label" for="initial">초기 금액 </label>
+                    <input type="text" data-type="num" inputmode="decimal" id="initial"
+                        class="number-separate-thousand-unit" onfocusout="focusoutNumSeparate()" value="10,000,000">
+                </div>
+                <div>
+                    <label class="form-label" for="time">복리 횟수 (기간)</label>
+                    <input type="text" inputmode="numeric" id="time" class="number-separate-thousand-unit"
+                        placeholder="0" maxlength="3" value="5">
+                </div>
+                <div>
+                    <label class="form-label" for="rate">수익률 (%)</label>
+                    <input type="text" data-type="percent" inputmode="decimal" id="rate"
+                        class="number-separate-thousand-unit" placeholder="%" value="1%">
+                </div>
+                <div>
+                    <button type="button" data-type="submit" onclick="hi()" class="cal">계산하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+<script type="text/javascript" src="createTable.js"></script>
+<script type="text/javascript" src="NumThousandSeparator.js"></script>
+
+</html>
